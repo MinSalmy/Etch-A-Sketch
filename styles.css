@@ -29,11 +29,15 @@ body {
 
 .container {
     display: grid;
+    /*display: table-column-group;*/
+    align-items: center;
+    justify-content: center;
     width: 80%;
     height: auto;
     min-height: 50%;
     gap: 20px;
-    grid-template-columns: 20% auto;
+    /*grid-template-columns: 20% auto;*/
+    grid-template-areas: "A B";
 }
 
 .menu{
@@ -43,33 +47,73 @@ body {
     align-items: center;
     /*background-color: rgb(0, 102, 255);*/
     gap: 10px;
-    padding: 3%;
+    padding: 3%; 
+    grid-area: A;   
 }
 
 #colorPicker {
     border: none;
-    width: 90%;
+    width: 250px;
     height: 50px;
 }
 
 button {
-    background-color: rgba(104, 155, 233, 0.938);
+    /*background-color: rgba(104, 155, 233, 0.938);*/
+    background-color: bisque;  
     font-family: "Roboto";
     font-weight: 300;
-    width: 90%;
+    width: 250px;
     font-size: 24px;
-    border: 2px solid rgb(233, 134, 4);
+    border: 1px solid #333333;
+    color: #333333;
+    /*border: 1px solid black;*/
     border-radius: 10px;
     padding: 5px;
 }
 
+.selected {
+    background-color: #333333;
+    color:bisque;  
+    /*border: 3px solid  rgba(104, 155, 233, 0.938);*/
+}
+
 .size-value {
-    font-size: 20px;
+    font-size: 20px;    
+}
+
+#sizeSlider {
+    color: #333333;
+    width: 250px;
 }
 
 .grid {
     display: grid;
+    height: 600px;
+    width: 600px;
+    grid-area: B;
+    /*height: 70vh;
+    width: height;*/
+    background-color: var(--secondary-light);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 1vh;
+    margin-right: 6vw;
+    box-sizing: content-box;
 }
+  
+.grid-element {
+    user-select: none;
+}
+
+[class^="block-"],
+[class^="row-"], 
+[class^="column-"] {
+    background-color: white;
+    /* Размещаем контейнеры по центру */
+    display: grid;
+    place-items: center;
+    min-width: 10px;
+    min-height: 10px;
+  }
 
 .footer {
     text-align: center;
