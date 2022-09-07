@@ -25,19 +25,16 @@ body {
     text-align: center;
     padding: 20px;
     background-color: rgb(247, 196, 134);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .container {
-    display: grid;
-    /*display: table-column-group;*/
+    display: flex;
     align-items: center;
     justify-content: center;
-    width: 80%;
     height: auto;
     min-height: 50%;
     gap: 20px;
-    /*grid-template-columns: 20% auto;*/
-    grid-template-areas: "A B";
 }
 
 .menu{
@@ -45,20 +42,23 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    /*background-color: rgb(0, 102, 255);*/
     gap: 10px;
     padding: 3%; 
-    grid-area: A;   
+    width: 300px;
 }
 
 #colorPicker {
-    border: none;
+    /*border: none;
     width: 250px;
-    height: 50px;
+    height: 50px;*/
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    -webkit-appearance: none;
+    width: 80px;
+    height: 80px;
+    border: none;
 }
 
 button {
-    /*background-color: rgba(104, 155, 233, 0.938);*/
     background-color: bisque;  
     font-family: "Roboto";
     font-weight: 300;
@@ -66,15 +66,14 @@ button {
     font-size: 24px;
     border: 1px solid #333333;
     color: #333333;
-    /*border: 1px solid black;*/
     border-radius: 10px;
     padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .selected {
     background-color: #333333;
     color:bisque;  
-    /*border: 3px solid  rgba(104, 155, 233, 0.938);*/
 }
 
 .size-value {
@@ -82,22 +81,25 @@ button {
 }
 
 #sizeSlider {
-    color: #333333;
     width: 250px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;   
+    -webkit-appearance: none;
+    background:  #333333;
+    outline: none;
+    border-radius: 10px;
 }
 
 .grid {
     display: grid;
     height: 600px;
     width: 600px;
-    grid-area: B;
+    
     /*height: 70vh;
     width: height;*/
     background-color: var(--secondary-light);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    margin-top: 1vh;
-    margin-right: 6vw;
     box-sizing: content-box;
+    border: 1px solid #333333;
 }
   
 .grid-element {
@@ -107,16 +109,20 @@ button {
 [class^="block-"],
 [class^="row-"], 
 [class^="column-"] {
-    background-color: white;
+    /*background-color: white;*/
+    
     /* Размещаем контейнеры по центру */
-    display: grid;
+    /*display: grid;*/
     place-items: center;
     min-width: 10px;
     min-height: 10px;
+    border-top: 1px solid #333333;
+    border-left: 1px solid #333333;
   }
 
 .footer {
     text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 20px;
     font-size: 20px;
     background-color: rgb(247, 196, 134);
